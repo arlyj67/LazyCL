@@ -1,0 +1,27 @@
+#pragma once
+
+#include "MainWindow.g.h"
+
+namespace winrt::LazyCL::implementation
+{
+    struct MainWindow : MainWindowT<MainWindow>
+    {
+        MainWindow()
+        {
+        }
+
+        int32_t MyProperty();
+        void MyProperty(int32_t value);
+
+        winrt::fire_and_forget myButton_Click(
+            winrt::Windows::Foundation::IInspectable const& sender,
+            winrt::Microsoft::UI::Xaml::RoutedEventArgs const& args);
+    };
+}
+
+namespace winrt::LazyCL::factory_implementation
+{
+    struct MainWindow : MainWindowT<MainWindow, implementation::MainWindow>
+    {
+    };
+}

@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="src/LazyCL/LazyCL.vcxproj" Id="62498158-1ba1-4c81-a0ad-83717d8398bc">
+    <Deploy />
+  </Project>
+  <Project Path="src/LazyCleaner.Engine/LazyCleaner.Engine.vcxproj" Id="db9f09c0-8aa8-48e9-ba1e-aba4571caae3">
+    <Platform Solution="*|ARM64" Project="x64" />
+  </Project>
+</Solution>

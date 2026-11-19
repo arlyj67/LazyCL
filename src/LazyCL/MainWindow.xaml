@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="LazyCL.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LazyCL"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="LazyCL">
+
+    <Grid>
+        <StackPanel Padding="24" Spacing="12">
+            <TextBlock Text="LazyCleaner" Style="{StaticResource TitleTextBlockStyle}"/>
+            <StackPanel Orientation="Horizontal" Spacing="12">
+                <Button x:Name="myButton" Content="Scan temp files" Click="myButton_Click"/>
+                <ProgressRing x:Name="busyRing" IsActive="False" Width="24" Height="24"/>
+            </StackPanel>
+            <TextBlock x:Name="summaryText" Text="Ready"/>
+            <ListView x:Name="resultsList" Height="400"/>
+        </StackPanel>
+    </Grid>
+</Window>
